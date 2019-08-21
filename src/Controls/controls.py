@@ -1,16 +1,14 @@
 import sys
 from PyQt5.QtCore import QUrl
 from PyQt5.QtGui import QGuiApplication
-from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtQuick import QQuickView
+from PyQt5.QtQml import QQmlApplicationEngine
 
 
 def main():
     app = QGuiApplication(sys.argv)
-    view = QQuickView()
-    view.setSource(QUrl.fromLocalFile('main.qml'))
-    view.setResizeMode(QQuickView.SizeRootObjectToView)
-    view.show()
+    engine = QQmlApplicationEngine()
+    engine.load(QUrl.fromLocalFile('controls.qml'))
     sys.exit(app.exec_())
 
 
