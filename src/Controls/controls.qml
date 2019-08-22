@@ -19,5 +19,7 @@ ApplicationWindow {
         Buttons {}
 
         TextEdits {}
+
+        Sliders {}
     }
 }

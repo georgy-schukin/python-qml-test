@@ -12,9 +12,11 @@ GroupBox {
 
         TextField {
             placeholderText: "Enter some text"
+            onTextChanged: label1.text = text
         }
 
         Text {
+            id: label1
             text: "Hello"
         }
 
@@ -24,9 +26,11 @@ GroupBox {
                 anchors.fill: parent
                 color: "yellow"
             }
+            onTextChanged: label2.text = text
         }
 
         Text {
+            id: label2
             text: "Hello"
         }
     }
