@@ -6,25 +6,18 @@ ApplicationWindow {
     id: mainWindow
     width: 500
     height: 500
-    color: "lightBlue"
     visible: true
     title: "Qt Quick Controls Example"
 
     ColumnLayout {
-        id: layout
+        id: colLayout
         spacing: 5
         anchors.fill: parent
+        anchors.verticalCenter: parent.top
+        anchors.margins: 10
 
-        Button {
-            id: button
-            text: "Click me!"
-            onClicked: button.text = "Clicked"
-        }
+        Buttons {}
 
-        Button {
-            id: button2
-            text: "Click me too!"
-            onClicked: button2.text = "Clicked too"
-        }
+        TextEdits {}
     }
 }
